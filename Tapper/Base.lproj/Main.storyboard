@@ -20,13 +20,32 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RetroBackground" translatesAutoresizingMaskIntoConstraints="NO" id="XFE-u2-3a5">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="TapperTitle" translatesAutoresizingMaskIntoConstraints="NO" id="M5i-PZ-ToD">
+                                <rect key="frame" x="132" y="59" width="336" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="71" id="1VR-af-m7l"/>
+                                    <constraint firstAttribute="width" constant="336" id="o0K-eJ-EzF"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7i-pk-liY">
+                                <rect key="frame" x="176" y="415" width="249" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="249" id="Vue-ae-9qq"/>
+                                    <constraint firstAttribute="height" constant="120" id="zZn-AF-srQ"/>
+                                </constraints>
+                                <state key="normal" image="PlayButton"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="c7i-pk-liY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8Hx-eA-Zad"/>
+                            <constraint firstItem="M5i-PZ-ToD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="9r3-4M-2PU"/>
                             <constraint firstItem="XFE-u2-3a5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="DI4-2R-5Ys"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="XFE-u2-3a5" secondAttribute="bottom" id="a3H-to-AQq"/>
                             <constraint firstAttribute="trailing" secondItem="XFE-u2-3a5" secondAttribute="trailing" id="fwG-PG-nVJ"/>
                             <constraint firstItem="XFE-u2-3a5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="lsc-9B-dar"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="c7i-pk-liY" secondAttribute="bottom" constant="65" id="rh3-9u-fwP"/>
+                            <constraint firstItem="M5i-PZ-ToD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uy5-fl-4nv"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -36,6 +55,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="PlayButton" width="356" height="175"/>
         <image name="RetroBackground" width="800" height="800"/>
+        <image name="TapperTitle" width="497" height="107"/>
     </resources>
 </document>
