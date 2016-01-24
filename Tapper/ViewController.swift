@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var maxTaps: Int = 0
+    var currentTaps: Int = 0
+    
     @IBOutlet weak var logoTitle: UIImageView!
     @IBOutlet weak var tapTextField: UITextField!
     @IBOutlet weak var playButton: UIButton!
@@ -27,12 +30,50 @@ class ViewController: UIViewController {
     }
 
     @IBAction func playGame(sender: UIButton) {
-        logoTitle.hidden = true
-        playButton.hidden = true
-        tapTextField.hidden = true
-        tapButton.hidden = false
-        tapLabel.hidden = false 
+        
+        if tapTextField.text != nil && tapTextField.text != "" {
+            logoTitle.hidden = true
+            playButton.hidden = true
+            tapTextField.hidden = true
+            tapButton.hidden = false
+            tapLabel.hidden = false
+            
+            maxTaps = Int(tapTextField.text!)!
+            currentTaps = 0
+            
+            updateTapsLabel()
+        }
     }
 
+    @IBAction func coinTapped(sender: UIButton) {
+        currentTaps++
+        updateTapsLabel()
+        
+        if isGameOver() {
+            restartGame()
+        }
+    }
+    
+    func updateTapsLabel() {
+        tapLabel.text = "\(currentTaps) Taps"
+    }
+    
+    func isGameOver() -> Bool {
+        if currentTaps >= maxTaps {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    func restartGame() {
+        maxTaps = 0
+        tapTextField.text = ""
+        logoTitle.hidden = false
+        playButton.hidden = false
+        tapTextField.hidden = false
+        tapButton.hidden = true
+        tapLabel.hidden = true
+    }
 }
 
