@@ -26,6 +26,13 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func playGame(sender: UIButton) {
+        logoTitle.hidden = true
+        playButton.hidden = true
+        tapTextField.hidden = true
+        tapButton.hidden = false
+        tapLabel.hidden = false 
+    }
 
 }
 
