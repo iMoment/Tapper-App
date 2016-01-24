@@ -9,6 +9,12 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var logoTitle: UIImageView!
+    @IBOutlet weak var tapTextField: UITextField!
+    @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var tapButton: UIButton!
+    @IBOutlet weak var tapLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
